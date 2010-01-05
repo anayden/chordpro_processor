@@ -1,8 +1,5 @@
 require 'rubygems'
-require 'pp'
 $KCODE = 'u'
-input1 = "У [Am]синего мо[Dm]ря, где[G] бушу[C]ют бураны"
-input2 = "Ты моряка, я моряк, ты рыбачка, я рыбак"
 
 def parse input
   input = input.gsub(' ', '&nbsp;')
@@ -32,8 +29,3 @@ def line text, chords = nil
   result += '</table>'
   return result
 end
-
-result = parse(input1)
-puts line(result[:text], result[:chords])
-result = parse(input2)
-puts line(result[:text], result[:chords])
